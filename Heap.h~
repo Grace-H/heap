@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cstring>
+
+#ifndef HEAP_H
+#define HEAP_H
+
+class Heap{
+ public:
+  int insert(int i);          //add int to heap
+  int extract();              //get root, remove root
+  int build(int array[100]);  //build heap from array
+  int peek();                 //get value root
+ private:
+  int heap[100];             //array for heap
+  int len;                   //length of heap
+};
