@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <cmath>
 #include "Heap.h"
 
 using namespace std;
@@ -75,9 +76,9 @@ int Heap::downheap(int index){
   return 0;
 }
 
-int Heap::build(int array[]){
+int Heap::build(int array[100], int size){
   //insert each element in the array
-  for(int i = 0; i < sizeof(array); i++){
+  for(int i = 0; i < size; i++){
     insert(array[i]);
   }
   return 0;
@@ -85,4 +86,20 @@ int Heap::build(int array[]){
 
 int Heap::peek(){
   return heap[0];
+}
+
+int Heap::visualize(){
+  int total = 0;
+  int numprinted = 0;  //num on level printed
+  int level = 0;
+
+  while(total < len){
+    //print number
+    cout << heap[total];
+    numprinted++;
+    
+    //if end of level print endl
+    if(numprinted == pow(2, level)){
+    }
+  }
 }
